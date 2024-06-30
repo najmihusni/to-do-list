@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .task-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .task-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #CACACA;
+            border-radius: 6px;
+            margin-top: 10px;
+            background: #FFF;
+        }
+        .task-item span {
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .task-status {
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 14px;
+            font-weight: 400;
+            color: #fff;
+            background-color: #0171d3;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .status-todo {
+            background-color: #0171d3;
+        }
+        .status-urgent {
+            background-color: #e63946;
+        }
+        .status-done {
+            background-color: #2a9d8f;
+        }
+        .nav-buttons {
+            margin-top: 20px;
+            text-align: center; /* Center align the buttons */
+        }
+        .nav-buttons a {
+            margin: 0 15px; /* Add margin around each link */
+            color: #0171d3;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <section class="container forms">
+        <div class="form tasks">
+            <div class="form-content">
+                <header>To-Do List</header>
+                <form id="task-form">
+                    <div class="field input-field">
+                        <input type="text" placeholder="New Task" class="input" id="new-task">
+                    </div>
+                    <div class="field button-field">
+                        <button type="submit">Add Task</button>
+                    </div>
+                </form>
+                <ul class="task-list" id="task-list">
+                    <!-- Task items will be appended here -->
+                </ul>
+                <div class="nav-buttons">
+                    <a href="profile.html">Edit Profile</a>
+                    <a href="index.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
